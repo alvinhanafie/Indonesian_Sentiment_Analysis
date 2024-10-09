@@ -3,3 +3,4 @@ pyngrok
 scikit-learn
 ngrok
 tensorflow
+streamlit
