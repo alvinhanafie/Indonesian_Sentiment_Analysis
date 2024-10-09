@@ -97,3 +97,16 @@ st.markdown(f"- [LinkedIn]({linkedin})")
 # GitHub
 github = "https://github.com/alvinhanafie"
 st.markdown(f"- [GitHub]({github})")
+
+from pyngrok import ngrok
+
+from google.colab import userdata
+SECRET = userdata.get('SECRET')
+# Set authentication token if you haven't already done so
+ngrok.set_auth_token(SECRET)
+# Start Streamlit server on a specific port
+!nohup streamlit run app.py --server.port 8501 &
+# Start ngrok tunnel to expose the Streamlit server
+ngrok_tunnel = ngrok.connect(addr='8501', proto='http', bind_tls=True)
+# Print the URL of the ngrok tunnel
+print(' * Tunnel URL:', ngrok_tunnel.public_url)
