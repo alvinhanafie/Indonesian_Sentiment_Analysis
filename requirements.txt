@@ -1,0 +1,5 @@
+sentence-transformers
+pyngrok
+scikit-learn
+ngrok
+tensorflow
