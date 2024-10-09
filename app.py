@@ -1,4 +1,5 @@
 
+!pip install streamlit sentence-transformers pyngrok scikit-learn ngrok tensorflow
 import streamlit as st
 import pandas as pd
 import numpy as np
