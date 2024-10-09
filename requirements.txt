@@ -4,3 +4,4 @@ scikit-learn
 ngrok
 tensorflow
 streamlit
+tf-keras
